@@ -1,9 +1,12 @@
-import Header from './Header'
+
+import Navbar from './Navbar';
+import ItemListContainer from './ItemListContainer';
+
 function App() {
   return (
     <>
-   <Header />
-   
+   <Navbar />
+   <ItemListContainer/>
    </>
   );
 }
