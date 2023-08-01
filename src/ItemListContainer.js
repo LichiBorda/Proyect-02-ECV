@@ -1,7 +1,11 @@
 
-function ItemListContainer() {
+function ItemListContainer(props) {
+  console.log(props)
   return (
-    <div>Bienvenidos</div>
+    <main>
+
+   <h2>Bienvenidos</h2>
+    </main>
   )
 }
 
