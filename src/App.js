@@ -1,12 +1,12 @@
 
-import Navbar from './Navbar';
-import ItemListContainer from './ItemListContainer';
+import Navbar from './componentes/Navbar';
+import ItemListContainer from './componentes/ItemListContainer';
 
 function App() {
   return (
     <>
    <Navbar />
-   <ItemListContainer id="greeting"/>
+   <ItemListContainer greeting="Bienvenidos a mi pagina"/>
    </>
   );
 }

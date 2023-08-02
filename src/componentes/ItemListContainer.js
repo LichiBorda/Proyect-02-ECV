@@ -4,7 +4,7 @@ function ItemListContainer(props) {
   return (
     <main>
 
-   <h2>Bienvenidos</h2>
+   <h2>{props.greeting}</h2>
     </main>
   )
 }
