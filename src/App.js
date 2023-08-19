@@ -1,6 +1,8 @@
 
 import Navbar from './componentes/Navbar'
 import ItemListContainer from './componentes/ItemListContainer';
+import Pruebas from './componentes/Pruebas';
+import ContainerProducts from './componentes/ContainerProducts';
 
 
 function App() {
@@ -8,6 +10,10 @@ function App() {
     <>
    <Navbar />
    <ItemListContainer greeting="Bienvenidos a mi pagina"/>
+   <ContainerProducts/>
+   <Pruebas/>
+
+
    </>
   );
 }
