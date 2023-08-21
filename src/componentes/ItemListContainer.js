@@ -1,10 +1,10 @@
-
+import ItemList from "./ItemList"
 function ItemListContainer(props) {
   console.log(props)
   return (
     <main>
 
-   <h2>{props.greeting}</h2>
+   <ItemList/>
     </main>
   )
 }
