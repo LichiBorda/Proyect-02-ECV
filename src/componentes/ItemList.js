@@ -1,12 +1,14 @@
 import React from 'react'
-import Item from './Item'
+
 import { Link } from 'react-router-dom'
+
 import imagenmenta2500 from '..//imagenes/menta-2500.png'
 import imagenmulti2500 from '..//imagenes/multifruta-2500.png'
 import imagenbanana2500 from '..//imagenes/banana-2500.png'
 import imagenblueberry3500 from '..//imagenes/blueberry-3500.png'
 import imagenmultifruta3500 from '..//imagenes/multifruta-3500.png'
 import imagensandia3500 from '..//imagenes/sandia-3500.png'
+import ItemCount from './ItemCount'
 
 
 
@@ -46,9 +48,10 @@ return (
               <p className="card-text">Precio: ${producto.precio}</p>
               <p className="card-text">{producto.descripcion}</p>
               <Link to="/detail" className="btn btn-primary">Comprar</Link>
+              <ItemCount/>
             </div>
           </div>
-          <Item/>
+          
         </div>
       ))}
     </div>
