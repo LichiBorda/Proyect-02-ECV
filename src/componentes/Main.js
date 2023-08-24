@@ -1,15 +1,21 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './ItemDetailContainer'
 import ItemList from './ItemList'
 import ItemListContainer from './ItemListContainer'
-import Cat2500 from './Cat2500'
+
+
+
+
 function Main() {
+
   return (
     <main>
         <Routes>
         <Route path="/cat2500" element={<ItemList category="2500" />} />
         <Route path="/cat3500" element={<ItemList category="3500" />} />
-        <Route path="/home" element={<ItemList />} />
+        <Route path="" element={<ItemListContainer />} />
+        <Route path='/detail/:id' element={<ItemDetailContainer />} />
           
            
         </Routes>
