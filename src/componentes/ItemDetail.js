@@ -1,15 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import ItemCount from './ItemCount'; // Asegúrate de importar ItemCount u otros componentes necesarios aquí
+import ItemCount from './ItemCount';
 
-function ItemDetail({ productos }) { // Pasa el array de productos como prop
-  const { id } = useParams();
-  const producto = productos.find(prod => prod.id === parseInt(id));
-
-  if (!producto) {
-    return <div>Producto no encontrado.</div>;
-  }
-
+function ItemDetail({ producto }) {
   return (
     <div className="row mt-4">
       <div className="col-md-6">
@@ -19,8 +11,7 @@ function ItemDetail({ productos }) { // Pasa el array de productos como prop
         <h2>{producto.sabor}</h2>
         <p>Precio: ${producto.precio}</p>
         <p>{producto.descripcion}</p>
-        {/* Renderiza otros detalles */}
-        <ItemCount /> {/* O cualquier otro componente que necesites */}
+        
       </div>
     </div>
   );
