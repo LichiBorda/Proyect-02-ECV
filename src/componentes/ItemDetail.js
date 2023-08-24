@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ItemCount from './ItemCount'; 
+import ItemCount from './ItemCount'; // Asegúrate de importar ItemCount u otros componentes necesarios aquí
 
 function ItemDetail({ productos }) { // Pasa el array de productos como prop
   const { id } = useParams();
@@ -19,8 +19,8 @@ function ItemDetail({ productos }) { // Pasa el array de productos como prop
         <h2>{producto.sabor}</h2>
         <p>Precio: ${producto.precio}</p>
         <p>{producto.descripcion}</p>
-      
-        <ItemCount /> 
+        {/* Renderiza otros detalles */}
+        <ItemCount /> {/* O cualquier otro componente que necesites */}
       </div>
     </div>
   );
