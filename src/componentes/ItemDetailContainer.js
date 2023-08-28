@@ -1,16 +1,9 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail';
+import React from 'react'
 
-function ItemDetailContainer({ productos }) {
-  const { id } = useParams();
-  const producto = productos.find(prod => prod.id === parseInt(id));
-
-  if (!producto) {
-    return <div>Producto no encontrado.</div>;
-  }
-
-  return <ItemDetail producto={producto} />;
+function ItemDetailContainer() {
+  return (
+    <div>ItemDetailContainer</div>
+  )
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

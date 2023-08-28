@@ -1,16 +1,19 @@
 import React from 'react';
-import { ArrayProductos } from './AsyncMock';
 
 function Item({ product }) {
-  return (
-    <div>
-      <img src={product.imagen} alt={product.sabor} />
-      <h3>{product.sabor}</h3>
-      <p>{product.descripcion}</p>
-      <p>Precio: {product.precio}</p>
-      <p>Puffs: {product.puffs}</p>
-    </div>
-  );
+    return (
+        <div className="col-md-4 mb-4">
+            <div className="card">
+                <img src={product.imagen} className="card-img-top card-img" alt={product.sabor} />
+                <div className="card-body">
+                    <h5 className="card-title">{product.sabor}</h5>
+                    <p className="card-text">{product.descripcion}</p>
+                    <p className="card-text">Precio: {product.precio}</p>
+                    <p className="card-text">Puffs: {product.puffs}</p>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default Item;

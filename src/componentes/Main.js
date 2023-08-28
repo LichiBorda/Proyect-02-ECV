@@ -12,14 +12,8 @@ function Main() {
   return (
     <main>
         <Routes>
-        <Route path="/cat2500" element={<ItemList category="2500" />} />
-        <Route path="" element={<ItemList category="2500" />} />
-        <Route path="/cat3500" element={<ItemList category="3500" />} />
-        <Route path="/10" element={<ItemListContainer />} />
-      
-
-          
-           
+        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/category/:categoryId" element={<ItemListContainer  />} />     
         </Routes>
         
     </main>

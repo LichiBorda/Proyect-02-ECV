@@ -20,8 +20,8 @@ function Navbar() {
             Vapes
           </a>
           <ul class="dropdown-menu">
-            <li><Link class="dropdown-item" to="/cat2500">2500 puffs</Link ></li>
-            <li><Link  class="dropdown-item" to="/cat3500">3500 puffs</Link ></li>
+            <li><Link class="dropdown-item" to="/category/2500">2500 puffs</Link ></li>
+            <li><Link  class="dropdown-item" to="/category/3500">3500 puffs</Link ></li>
             <li><a class="dropdown-item" href="#"></a></li>
           </ul>
         </li>
