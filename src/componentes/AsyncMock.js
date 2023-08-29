@@ -32,7 +32,7 @@
  export function getProductById(id) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const foundProduct = ArrayProductos.find(product => product.id === id);
+        const foundProduct = ArrayProductos.find(product => product.id === parseInt(id));
         resolve(foundProduct);
       }, 1000);
     });
