@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Item({ product }) {
     return (
@@ -10,6 +11,7 @@ function Item({ product }) {
                     <p className="card-text">{product.descripcion}</p>
                     <p className="card-text">Precio: {product.precio}</p>
                     <p className="card-text">Puffs: {product.puffs}</p>
+                    <Link to={`/item/${product.id}`}><p className='link'>Ver mas</p> </Link>
                 </div>
             </div>
         </div>
