@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 function ItemDetail({producto}) {
   console.log(producto)
   return (
   <div>
-       <div className="col-md-4 mb-4">
+       <div className="col-md-4 mb-4 container mt-4">
             <div className="card">
                 <img src={producto.imagen} className="card-img-top card-img" alt={producto.sabor} />
                 <div className="card-body">
@@ -13,6 +14,7 @@ function ItemDetail({producto}) {
                     <p className="card-text">{producto.descripcion}</p>
                     <p className="card-text">Precio: {producto.precio}</p>
                     <p className="card-text">Puffs: {producto.puffs}</p>
+                    <ItemCount/>
                 </div>
             </div>
         </div>
