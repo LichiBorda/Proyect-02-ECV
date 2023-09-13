@@ -8,7 +8,7 @@ const Micustomprovider = (props) => {
     const valordelcontexto = {
         carrito : [],
         montoTotal : 0,
-        cantidadTotal : 4,
+        cantidadTotal : 15,
     }
   return (
     <Provider value={valordelcontexto}>

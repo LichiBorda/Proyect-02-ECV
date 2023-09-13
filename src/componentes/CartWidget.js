@@ -1,5 +1,6 @@
 import { useContext } from "react"
-import { contexto } from "./Micontexto"
+import { contexto } from "./CartContext"
+import { Link } from 'react-router-dom'
 
 
 function CartWidget() {
@@ -11,7 +12,7 @@ function CartWidget() {
   <div className="row">
     
     <div className="col">
-    <img className="logo-carrito float-end"  src="/imagenes/carrito-de-compras.png" alt="" />
+    <Link to="/carrito"><img className="logo-carrito float-end" to="" src="/imagenes/carrito-de-compras.png" alt="" /></Link>
     <span className="float-end contador mt-2">{valordelcontexto.cantidadTotal}</span>
     </div>
   </div>
