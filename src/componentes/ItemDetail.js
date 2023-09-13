@@ -1,9 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';
+
+import ItemCount from './ItemCount';
 
 function ItemDetail({producto}) {
+    const {addToCart} = useContext(CartContext)
   console.log(producto)
+  
+  const onAdd = (count) =>{
+   addToCart()
+  }
+
   return (
   <div>
        <div className="col-md-4 mb-4 container mt-4">
@@ -14,7 +21,7 @@ function ItemDetail({producto}) {
                     <p className="card-text">{producto.descripcion}</p>
                     <p className="card-text">Precio: {producto.precio}</p>
                     <p className="card-text">Puffs: {producto.puffs}</p>
-                    <ItemCount/>
+                    <ItemCount onAdd={onAdd}/>
                 </div>
             </div>
         </div>

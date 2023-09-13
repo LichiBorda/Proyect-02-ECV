@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { getProducts, getProductsByCategory } from './AsyncMock';
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList';
+import { CartContext } from './CartContext';
 
 function ItemListContainer({ category }) {
   const [products, setProducts] = useState([]);
@@ -17,6 +18,8 @@ function ItemListContainer({ category }) {
             getProducts().then((result) => setProducts(result))
           }
         }, [categoryId]);
+
+       
   return (
     <div>
       <h2>{categoryId === "2500" ? "Productos 2500 puffs" : categoryId === "3500" ? "Productos 3500 puffs" : "Todos los productos"}</h2>

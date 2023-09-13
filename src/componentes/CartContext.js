@@ -1,20 +1,28 @@
 
-import { createContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 
-export const contexto = createContext()
-const Provider = contexto.Provider
 
-const Micustomprovider = (props) => {
-    const valordelcontexto = {
-        carrito : [],
-        montoTotal : 0,
-        cantidadTotal : 15,
-    }
+export const CartContext = createContext()
+
+
+const Micustomprovider = ({children}) =>{
+
+const[cartArray,setCartArray] = useState([])
+const addToCart = (producto,count) =>{
+  console.log(`Agregaste un producto sabor ${producto.sabor} a un precio de ${count}`)
+}
+const value = {
+  cartArray,
+  
+}
+
+  
+
   return (
-    <Provider value={valordelcontexto}>
+    <CartContext.Provider value={value}>
 
-    {props.children}
-    </Provider>
+    {children}
+    </CartContext.Provider>
   )
 }
 
